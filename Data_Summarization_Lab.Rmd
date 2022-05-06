@@ -1,0 +1,92 @@
+---
+title: "Data Summarization Lab Key"
+output:
+  word_document: default
+  pdf_document: default
+  html_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Data used
+
+Bike Lanes Dataset: BikeBaltimore is the Department of Transportation's bike program. 
+The data is from http://data.baltimorecity.gov/Transportation/Bike-Lanes/xzfj-gyms
+
+# already downloaded from github ANeef
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyverse)
+
+
+bike = read_csv("intro_R-main/Bike_Lanes.csv")
+```
+
+
+# Part 1
+
+1. How many bike "lanes" are currently in Baltimore?  You can assume each observation/row is a different bike "lane".  (hint: how to get the number of rows of a data set)
+```{r q1}
+
+```
+
+2. How many (a) feet and (b) miles of bike "lanes" are currently in Baltimore? (`5280` feet in a mile.
+
+```{r q2}
+
+```
+
+# Part 2
+
+3. How many types of bike lanes are there?   (Hints: `unique`, `table`, or `bike %>% count`). Which `type` has (a) the most number of and (b) longest average bike lane length? (Hint: `group_by` and `summarize`)
+   
+```{r q3}
+
+
+
+```
+
+
+4. How many different projects do the "bike" lanes fall into? 
+		Which `project` category has the longest average bike lane? 
+
+```{r q4}
+
+
+
+```
+
+			  
+5. What was the average bike lane length per year that they were installed? 
+ Set `bike$dateInstalled` to `NA` if it is equal to zero.
+```{r q5}
+
+
+
+```
+
+# Part 3
+
+6. (a) Numerically [hint: `quantile()`, using `bike$length`] and 
+		(b) graphically [hint: `qplot(length, geom = "histogram")` or `qplot( geom = "density")`] describe the distribution of bike "lane" lengths.
+```{r q6}
+
+
+
+```
+
+7. Then describe as above, after stratifying by  i) `type` then ii) number of lanes (`numLanes`) using `boxplot`: 
+```{r q7}
+
+
+
+```
+

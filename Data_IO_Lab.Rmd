@@ -31,18 +31,16 @@ library(readr)
 2. Load the `readxl` package with the `library` command. 
 If it is not installed, install it via: RStudio --> Tools --> Install Packages
 ```{r}
+library(readxl)
 
 ```
 
 
-Download in the dataset of monuments from:  `Monuments.xlsx`
-
-
-
-3. Use the `read_excel()` function in the `readxl` package to read the `Monuments.xlsx` file and call the output `mon`. 
+3. Use the `read_excel()` function in the `readxl` package to read any `.xlsx` file and call the output `mon`. 
 
 ```{r}
 
+mon = read_excel("Monuments.xlsx")
 ```
 
 # Part 3
